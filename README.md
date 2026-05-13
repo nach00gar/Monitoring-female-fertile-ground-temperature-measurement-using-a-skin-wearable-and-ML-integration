@@ -3,8 +3,10 @@
 > **Status:** Prepared for peer review / journal submission.
 
 This repository contains the full data processing and machine-learning
-pipeline used to predict the ovulation cycle day from wearable temperature
+pipeline used to predict ovulation based on wearable temperature
 sensors, as described in the accompanying paper.
+
+In submission...
 
 ## Quick start
 
