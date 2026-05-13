@@ -1,0 +1,29 @@
+# Pipeline configuration
+# All paths are relative to the repository root (Codigo Claude/)
+
+data:
+  # Raw inputs (place your original data files here)
+  raw_temp_csv:  "data/medResultsTu.csv"
+  med_notes_csv: "data/medNotes.csv"
+
+  # Intermediate output directory (pickles + CSV artefacts)
+  preproc_output_dir: "data/preprocessed"
+
+  # Final normalised pickle (end product of preprocessing)
+  norm_pkl: "data/preprocessed/muestras_ovul_horas_norm1.pkl"
+
+  # Classification database output (MaxRange.csv)
+  dataset_output_dir: "results"
+
+model:
+  kernel: "rbf"
+  # Grid-search candidates for gamma and sigma (LS-SVM hyperparameters)
+  gamma_candidates: [0.001, 0.01, 0.1, 1.0, 10.0, 100.0, 1000.0]
+  sigma_candidates: [0.001, 0.01, 0.1, 1.0, 10.0, 100.0, 1000.0]
+  # Inner cross-validation folds (StratifiedKFold)
+  inner_cv_splits: 10
+  # Random seed – do NOT change to maintain reproducibility
+  random_state: 42
+
+figures:
+  output_dir: "figures"

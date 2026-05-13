@@ -1,0 +1,27 @@
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environments
+.venv/
+env/
+venv/
+*.egg-info/
+
+# Data (private – not tracked)
+data/medResultsTu.csv
+data/medNotes.csv
+data/preprocessed/
+
+# Results & figures (generated at runtime)
+results/
+figures/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# OS files
+.DS_Store
+Thumbs.db
